@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>benny chew | home</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-495016-8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-495016-8");
+    </script>
+    <script type="text/javascript">
+      ImageArray = new Array();
+      ImageArray[0] = "8/7268/8166684494_a17d2f9102_h.jpg"; // 12 apostles
+      ImageArray[1] = "4/3836/14563591676_1e007012f4_h.jpg"; // crown no fireball
+      ImageArray[2] = "6/5584/14583376151_d68c31cbf6_h.jpg"; // crown fireball
+      ImageArray[3] = "8/7302/9097613893_c09c9b66c3_h.jpg"; // loch ard gorge
+      ImageArray[4] = "8/7112/8166647353_ca841fcb83_h.jpg"; // gibson steps
+
+      function getRandomImage() {
+        var num = Math.floor(Math.random() * 5);
+        var img = ImageArray[num];
+        document.getElementById("background").innerHTML =
+          '<img src="https://c1.staticflickr.com/' + img + '" class="stretch" alt="" />';
+      }
+    </script>
+  </head>
+  <body onload="getRandomImage()">
+    <div id="background"></div>
+    <div id="profile">
+    </div>
+    <div id="footer">&copy; 2024 <a href="https://bennychew.com/">Benny Chew</a></div>
+  </body>
+</html>
